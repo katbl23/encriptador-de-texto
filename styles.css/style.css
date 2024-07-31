@@ -52,10 +52,11 @@ body{
 
 #conversortexto{
     display: flex;
+
 }
 #Ingresar-texto{
     resize: none; /* Desactiva el redimensionamiento manual */
-    overflow: hidden; /* Oculta las barras de desplazamiento */
+    overflow: hidden; 
     text-align: center;
     border: none;
     margin-top: 50px;
@@ -64,6 +65,8 @@ body{
     font-family: var(--fuente-inter);
     border: none;
     background-color:var(--color-fondo);
+    position: absolute;
+    max-height: 430px;
 }
 
 .conversortexto__interaccion{
@@ -83,6 +86,7 @@ body{
     border: 2px solid ;
     border-color: black;
     border-radius: 2rem;
+    margin-top: 40px;
     /* Arriba | Derecha | Abajo | Izquierda  margin: 0% 0% 0% 68%; */
    
 }
@@ -90,7 +94,7 @@ body{
     resize: none; /* Desactiva el redimensionamiento manual */
     overflow: hidden; /* Oculta las barras de desplazamiento */
     margin-bottom: 10px; /* Espacio entre textareas */
-    padding: 10px; /* Aumenta el padding para mejor visualización */
+    padding: 10px;
     Width:336px;
     Height:48px;
     text-align: center;
@@ -130,4 +134,126 @@ body{
     text-align: center;
     color: var(--color-primario);
 
+}
+@media (max-width:1158px){
+    body {
+      background-color: var(--color-fondo); /* Cambia el color para comprobar si se aplica */
+    }
+
+    #Ingresar-texto{
+        resize: none; /* Desactiva el redimensionamiento manual */
+        overflow: hidden; 
+        text-align: center;
+        border: none;
+        margin-top: 50px;
+        margin-left: 240px;
+        font-size: 2rem;
+        font-family: var(--fuente-inter);
+        border: none;
+        background-color:var(--color-fondo);
+        position:sticky;
+        max-height: 430px;
+        position: absolute;
+        width: 70%;
+   
+    }
+
+    .conversortexto__interaccion_desencripta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 644px;
+        background-color: #FFFFFF;
+        border: 2px solid ;
+        border-color: black;
+        border-radius: 2rem;
+        margin-top: 80px;
+        margin-left: 70px;
+
+        /* Arriba | Derecha | Abajo | Izquierda  margin: 0% 0% 0% 68%; */
+       
+    }
+    #imagen {
+        display: none; /* Oculta la imagen en pantallas más pequeñas */
+    }
+
+    #conversortexto {
+        display: flex;
+        flex-direction: column-reverse; /* Cambia a columna en pantallas pequeñas */
+         /* Opcional: centra el contenido horizontalmente */
+        position: relative;
+    }
+
+    .conversortexto__botones{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-left: 120px;
+        margin-right: 80px;
+        margin-top: 500px;
+    }
+
+    .conversortexto__interaccion {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; /* Opcional: centra los botones */
+    }
+
+    .conversortexto__interaccion_desencripta {
+        width: auto; /* Puedes ajustar el ancho */
+        height: auto; /* Ajustar a auto para que crezca según el contenido */
+        margin-top: 100px;
+
+        width: 688px;
+        height:133px;
+        top: 900px;
+        left: 30px;
+        padding: 2px 0px 0px 0px;
+        border-radius: 32px 32px 32px 32px;
+        opacity: 0px;
+
+    }
+    .conversortexto__interaccion_desencripta textarea {
+        resize: none; /* Desactiva el redimensionamiento manual */
+        overflow: hidden; /* Oculta las barras de desplazamiento */
+        margin-top: 1px;
+        margin-bottom: 3px; /* Espacio entre textareas */
+        text-align: center;
+        width: 624px;
+    }
+}
+
+@media (max-width:600px){
+    body{background-color: var(--color-fondo); /* Cambia el color para comprobar si se aplica */
+    }
+
+    #Ingresar-texto {
+        resize: none; /* Desactiva el redimensionamiento manual */
+        overflow: hidden; 
+        text-align: center;
+        border: none;
+        margin-top: 20px; /* Ajusta el espacio superior */
+        margin-left: 0; /* Ajusta el margen izquierdo a 0 para que no se desplace */
+        margin-right: 0; /* Agrega este margen para evitar el desplazamiento en pantallas pequeñas */
+        font-size: 2rem;
+        font-family: var(--fuente-inter);
+        border: none;
+        background-color: var(--color-fondo);
+        position: absolute; /* Cambia a relative o elimina esta propiedad */
+        max-height: 430px;
+        width: 90%; /* Ajusta el ancho para que se adapte a la pantalla */
+        max-width: 600px; /* Establece un ancho máximo */
+    }
+    
+
+    .conversortexto{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .conversortexto__interaccion{
+        display: flex;
+        flex-direction: column;
+    }
 }

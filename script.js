@@ -41,7 +41,7 @@ function ajustarAltura(textarea) {
 ajustarAltura(textarea1);
 ajustarAltura(textarea2);
 
-// Evento para ajustar la altura en cada entrada
+// Evento para ajustar la altura a medida que ingresa el texto
 textarea1.addEventListener('input', function() {
     ajustarAltura(this);
 });
