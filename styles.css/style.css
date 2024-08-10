@@ -90,6 +90,10 @@ body{
     /* Arriba | Derecha | Abajo | Izquierda  margin: 0% 0% 0% 68%; */
    
 }
+
+.conversortexto__interaccion_desencripta__copiar{
+    justify-content: flex-end;
+}
 .conversortexto__interaccion_desencripta textarea {
     resize: none; /* Desactiva el redimensionamiento manual */
     overflow: hidden; /* Oculta las barras de desplazamiento */
