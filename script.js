@@ -3,6 +3,15 @@ document.getElementById("Ingresar-texto").addEventListener("change", function(){
     modificar_parametros(texto_entrada); // Llamada a la función con el valor del input
 });
 
+document.getElementById("copiar").addEventListener("click",function(){
+    var texto_a_copiar = document.getElementById("encriptar-desencriptar").value;
+    navigator.clipboard.writeText(texto_a_copiar)
+    .then(function(){
+        console.log(texto_a_copiar)
+        alert("Texto copiado")
+    })
+})
+
 document.getElementById("encriptar").addEventListener("click",function(){
     var texto_entrada = document.getElementById("Ingresar-texto").value;
     var texto_encriptado = encriptar_string(texto_entrada);
